@@ -28,7 +28,6 @@ public class Student {
 	private long acc_no;
 	private String ifsc_code;
 	private String bank_name;
-	//private String gender;     //enum(male,female,other)
 	private Gender gender;
 	private String state_domicile; //spelling typo domicle
 	private String district;

@@ -44,12 +44,9 @@ public class Application {
 	private String disability_type;
 	private String percentage_disability;
 	private boolean marital_status;
-	//private Occupation partent_profession; //parents
 	private Occupation parents_profession;
-	//private String state; //int
 	private int state;
 	private String district;
-	//private int block; //string
 	private String block;
 	private int pincode; 
 	private int house_no;
@@ -59,25 +56,18 @@ public class Application {
 	private boolean approved_ministry;
 	
 	
-	//@OneToOne(mappedBy = "docApplication", cascade = CascadeType.MERGE)  //problem
-	@OneToOne(mappedBy = "application", cascade = CascadeType.MERGE)
+	@OneToOne(mappedBy = "application", cascade = CascadeType.ALL)
 	private Document document;
 	
-	//@OneToOne(mappedBy = "academicApplication", cascade = CascadeType.MERGE)   //problem
-	@OneToOne(mappedBy = "application_acad", cascade = CascadeType.MERGE)
+	@OneToOne(mappedBy = "application_acad", cascade = CascadeType.ALL)
 	private AcademicDetails academicDetails;
 	
-	/*
-	@OneToOne(mappedBy = "schemeApplication", cascade = CascadeType.MERGE)
-	private Scheme scheme;
-	*/
-	
 	@ManyToOne()
-	@JoinColumn(name="scheme_no")    
+	@JoinColumn(name="scheme_no_ref")    
 	private Scheme scheme;
 	
 	@ManyToOne()
-	@JoinColumn(name="student_id")    
+	@JoinColumn(name="student_id_ref")    
 	private Student student;
 	
 	@ManyToOne

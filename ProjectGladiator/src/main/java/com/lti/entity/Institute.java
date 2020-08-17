@@ -12,7 +12,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.lti.enums.InstituteCategory;
-import com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext.State;
 
 @Entity
 @Table(name="institute_table")
@@ -23,7 +22,6 @@ public class Institute {
 	private int institute_code;
 	private String institute_name;
 	private InstituteCategory institute_category;
-	//private String state; //int
 	private int state;
 	private String district;
 	private String dise_code;
@@ -37,7 +35,6 @@ public class Institute {
 	private String add_line_1;
 	private String add_line_2;
 	private String city;
-	//private String pincode; //int
 	private int pincode;
 	private String principal_name;
 	private int institute_mobile_no;
@@ -50,7 +47,7 @@ public class Institute {
 	
 	@ManyToOne
 	@JoinColumn(name="state_id_ref")
-	private StateNodal stateNodal_Min;
+	private StateNodal stateNodal;
 	
 	@ManyToOne
 	@JoinColumn(name="ministry_id_ref")

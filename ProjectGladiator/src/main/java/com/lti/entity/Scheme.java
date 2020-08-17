@@ -19,12 +19,6 @@ public class Scheme {
 	private String scheme_detail;
 	private SchemeType scheme_type;
 	
-	/*
-	@OneToOne
-	@JoinColumn(name = "application_id_ref")
-	private Application application;
-	*/
-	
 	@OneToMany(mappedBy = "scheme", cascade = CascadeType.ALL)
 	private Application application_scheme;
 }
