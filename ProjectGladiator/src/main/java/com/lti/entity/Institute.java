@@ -23,7 +23,8 @@ public class Institute {
 	private int institute_code;
 	private String institute_name;
 	private InstituteCategory institute_category;
-	private String state;
+	//private String state; //int
+	private int state;
 	private String district;
 	private String dise_code;
 	private String location;
@@ -36,19 +37,20 @@ public class Institute {
 	private String add_line_1;
 	private String add_line_2;
 	private String city;
-	private String pincode;
+	//private String pincode; //int
+	private int pincode;
 	private String principal_name;
 	private int institute_mobile_no;
 	private int institute_telephone;
 	private boolean approved_state_status;
 	private boolean approved_ministry;
 	
-	@OneToMany(mappedBy = "institute", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "institute", cascade = CascadeType.ALL) 
 	private List<Application> applications;
 	
 	@ManyToOne
 	@JoinColumn(name="state_id_ref")
-	private StateNodal stateNodal;
+	private StateNodal stateNodal_Min;
 	
 	@ManyToOne
 	@JoinColumn(name="ministry_id_ref")

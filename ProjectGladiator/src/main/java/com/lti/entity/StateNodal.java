@@ -16,9 +16,11 @@ public class StateNodal {
 	private String state_nodal_username;
 	private String state_nodal_password;
 	
-	@OneToMany(mappedBy = "instituteState", cascade = CascadeType.ALL)
+	//@OneToMany(mappedBy = "instituteState", cascade = CascadeType.ALL)  //wrong
+	@OneToMany(mappedBy = "stateNodal_Min", cascade = CascadeType.ALL)
 	private List<Institute> institutes;
 	
-	@OneToMany(mappedBy = "applicationState", cascade = CascadeType.ALL)
+	//@OneToMany(mappedBy = "applicationState", cascade = CascadeType.ALL) //wrong
+	@OneToMany(mappedBy = "stateNodal", cascade = CascadeType.ALL)
 	private List<Application> applications;
 }

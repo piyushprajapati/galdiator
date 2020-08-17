@@ -26,6 +26,6 @@ public class AcademicDetails {
 	
 	@OneToOne
 	@JoinColumn(name = "application_id_ref")
-	private Application application;
+	private Application application_acad;
 	
 }
