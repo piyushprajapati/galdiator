@@ -1,0 +1,15 @@
+package com.lti.enums;
+
+public enum Occupation {
+	Healthcare_Practitioners_and_Technical_Occupations,
+	Healthcare_Support_Occupations,
+	Business_Executive_Management_and_Financial_Occupations,
+	Architecture_and_Engineering_Occupations,
+	Education_Training_and_Library_Occupations,
+	Other_Professional_Occupations,
+	Office_and_Administrative_Support_Occupations,
+	Services_Occupations,
+	Agriculture_Maintenance_Repair_and_Skilled_Crafts_Occupations,
+	Transportation_Occupations,
+	Other_Occupations
+}
