@@ -81,5 +81,303 @@ public class Application {
 	@ManyToOne
 	@JoinColumn(name="ministry_id_ref")
 	private Ministry ministry;
+
+	public int getApp_id() {
+		return app_id;
+	}
+
+	public void setApp_id(int app_id) {
+		this.app_id = app_id;
+	}
+
+	public long getAadhar() {
+		return aadhar;
+	}
+
+	public void setAadhar(long aadhar) {
+		this.aadhar = aadhar;
+	}
+
+	public String getReligion() {
+		return religion;
+	}
+
+	public void setReligion(String religion) {
+		this.religion = religion;
+	}
+
+	public String getFather_name() {
+		return father_name;
+	}
+
+	public void setFather_name(String father_name) {
+		this.father_name = father_name;
+	}
+
+	public String getMother_name() {
+		return mother_name;
+	}
+
+	public void setMother_name(String mother_name) {
+		this.mother_name = mother_name;
+	}
+
+	public String getCommunity_category() {
+		return community_category;
+	}
+
+	public void setCommunity_category(String community_category) {
+		this.community_category = community_category;
+	}
+
+	public long getAnnual_income() {
+		return annual_income;
+	}
+
+	public void setAnnual_income(long annual_income) {
+		this.annual_income = annual_income;
+	}
+
+	public int getInst_code() {
+		return inst_code;
+	}
+
+	public void setInst_code(int inst_code) {
+		this.inst_code = inst_code;
+	}
+
+	public String getPresent_course() {
+		return present_course;
+	}
+
+	public void setPresent_course(String present_course) {
+		this.present_course = present_course;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public String getMode_study() {
+		return mode_study;
+	}
+
+	public void setMode_study(String mode_study) {
+		this.mode_study = mode_study;
+	}
+
+	public String getBoard_name() {
+		return board_name;
+	}
+
+	public void setBoard_name(String board_name) {
+		this.board_name = board_name;
+	}
+
+	public LocalDate getClass_start_date() {
+		return class_start_date;
+	}
+
+	public void setClass_start_date(LocalDate class_start_date) {
+		this.class_start_date = class_start_date;
+	}
+
+	public String getPrev_course() {
+		return prev_course;
+	}
+
+	public void setPrev_course(String prev_course) {
+		this.prev_course = prev_course;
+	}
+
+	public int getPrev_passing_year() {
+		return prev_passing_year;
+	}
+
+	public void setPrev_passing_year(int prev_passing_year) {
+		this.prev_passing_year = prev_passing_year;
+	}
+
+	public int getPrev_passing_percentage() {
+		return prev_passing_percentage;
+	}
+
+	public void setPrev_passing_percentage(int prev_passing_percentage) {
+		this.prev_passing_percentage = prev_passing_percentage;
+	}
+
+	public boolean isIs_disability() {
+		return is_disability;
+	}
+
+	public void setIs_disability(boolean is_disability) {
+		this.is_disability = is_disability;
+	}
+
+	public String getDisability_type() {
+		return disability_type;
+	}
+
+	public void setDisability_type(String disability_type) {
+		this.disability_type = disability_type;
+	}
+
+	public String getPercentage_disability() {
+		return percentage_disability;
+	}
+
+	public void setPercentage_disability(String percentage_disability) {
+		this.percentage_disability = percentage_disability;
+	}
+
+	public boolean isMarital_status() {
+		return marital_status;
+	}
+
+	public void setMarital_status(boolean marital_status) {
+		this.marital_status = marital_status;
+	}
+
+	public Occupation getParents_profession() {
+		return parents_profession;
+	}
+
+	public void setParents_profession(Occupation parents_profession) {
+		this.parents_profession = parents_profession;
+	}
+
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
+	}
+
+	public String getDistrict() {
+		return district;
+	}
+
+	public void setDistrict(String district) {
+		this.district = district;
+	}
+
+	public String getBlock() {
+		return block;
+	}
+
+	public void setBlock(String block) {
+		this.block = block;
+	}
+
+	public int getPincode() {
+		return pincode;
+	}
+
+	public void setPincode(int pincode) {
+		this.pincode = pincode;
+	}
+
+	public int getHouse_no() {
+		return house_no;
+	}
+
+	public void setHouse_no(int house_no) {
+		this.house_no = house_no;
+	}
+
+	public int getStreet_no() {
+		return street_no;
+	}
+
+	public void setStreet_no(int street_no) {
+		this.street_no = street_no;
+	}
+
+	public boolean isApproved_institute() {
+		return approved_institute;
+	}
+
+	public void setApproved_institute(boolean approved_institute) {
+		this.approved_institute = approved_institute;
+	}
+
+	public boolean isApproved_state() {
+		return approved_state;
+	}
+
+	public void setApproved_state(boolean approved_state) {
+		this.approved_state = approved_state;
+	}
+
+	public boolean isApproved_ministry() {
+		return approved_ministry;
+	}
+
+	public void setApproved_ministry(boolean approved_ministry) {
+		this.approved_ministry = approved_ministry;
+	}
+
+	public Document getDocument() {
+		return document;
+	}
+
+	public void setDocument(Document document) {
+		this.document = document;
+	}
+
+	public AcademicDetails getAcademicDetails() {
+		return academicDetails;
+	}
+
+	public void setAcademicDetails(AcademicDetails academicDetails) {
+		this.academicDetails = academicDetails;
+	}
+
+	public Scheme getScheme() {
+		return scheme;
+	}
+
+	public void setScheme(Scheme scheme) {
+		this.scheme = scheme;
+	}
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public Institute getInstitute() {
+		return institute;
+	}
+
+	public void setInstitute(Institute institute) {
+		this.institute = institute;
+	}
+
+	public StateNodal getStateNodal() {
+		return stateNodal;
+	}
+
+	public void setStateNodal(StateNodal stateNodal) {
+		this.stateNodal = stateNodal;
+	}
+
+	public Ministry getMinistry() {
+		return ministry;
+	}
+
+	public void setMinistry(Ministry ministry) {
+		this.ministry = ministry;
+	}
+	
+	
 	
 }
