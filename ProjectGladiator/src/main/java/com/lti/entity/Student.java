@@ -22,10 +22,10 @@ public class Student {
 	private String password;
 	private String name;
 	private LocalDate dob;
-	private long mobile;
+	private String mobile;
 	private String email;
-	private long aadhar;
-	private long acc_no;
+	private String aadhar;
+	private String acc_no;
 	private String ifsc_code;
 	private String bank_name;
 	private Gender gender;
@@ -85,13 +85,13 @@ public class Student {
 
 
 
-	public long getMobile() {
+	public String getMobile() {
 		return mobile;
 	}
 
 
 
-	public void setMobile(long mobile) {
+	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
 
@@ -109,25 +109,25 @@ public class Student {
 
 
 
-	public long getAadhar() {
+	public String getAadhar() {
 		return aadhar;
 	}
 
 
 
-	public void setAadhar(long aadhar) {
+	public void setAadhar(String aadhar) {
 		this.aadhar = aadhar;
 	}
 
 
 
-	public long getAcc_no() {
+	public String getAcc_no() {
 		return acc_no;
 	}
 
 
 
-	public void setAcc_no(long acc_no) {
+	public void setAcc_no(String acc_no) {
 		this.acc_no = acc_no;
 	}
 
