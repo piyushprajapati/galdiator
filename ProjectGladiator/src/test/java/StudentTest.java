@@ -26,8 +26,6 @@ public class StudentTest {
 		student.setGender(Gender.Male);
 		student.setState_domicile("Rajasthan");
 		student.setDistrict("Ajmer");
-		
-	
 	}
 	
 	
