@@ -1,10 +1,13 @@
 import java.time.LocalDate;
 
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.lti.dao.StudenDao;
+import com.lti.dao.StudentDao;
+import com.lti.entity.Gender;
+import com.lti.entity.Ministry;
 import com.lti.entity.Student;
-import com.lti.enums.Gender;
 
 public class StudentTest {
 	
@@ -24,8 +27,22 @@ public class StudentTest {
 		student.setState_domicile("Rajasthan");
 		student.setDistrict("Ajmer");
 		
-		StudenDao dao = new StudenDao();
-		dao.addNewStudent(student);
+	
 	}
 	
+	
+	
+	@Test
+	public void addCentralMinistry() {
+		Ministry ministry =new Ministry();
+		ministry.setMinistry_username("Piyush");
+		ministry.setMinistry_password("abc");
+		
+		ApplicationContext ctx=new ClassPathXmlApplicationContext("spring-config.xml");
+		StudentDao dao = (StudentDao)ctx.getBean("s");
+		dao.addCentralMinistry(ministry);
+		
+	}
+	
+
 }

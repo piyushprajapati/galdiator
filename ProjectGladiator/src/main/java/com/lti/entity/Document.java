@@ -124,6 +124,6 @@ public class Document {
 	public void setApplication(Application application) {
 		this.application = application;
 	}
-	
+
 	
 }

@@ -1,4 +1,4 @@
-package com.lti.enums;
+package com.lti.entity;
 
 public enum Occupation {
 	Healthcare_Practitioners_and_Technical_Occupations,

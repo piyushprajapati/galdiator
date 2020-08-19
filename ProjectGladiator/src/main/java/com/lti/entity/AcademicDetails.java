@@ -107,7 +107,6 @@ public class AcademicDetails {
 	public void setApplication_acad(Application application_acad) {
 		this.application_acad = application_acad;
 	}
-	
-	
-	
+
+
 }

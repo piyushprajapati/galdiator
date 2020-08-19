@@ -1,4 +1,4 @@
-package com.lti.enums;
+package com.lti.entity;
 
 public enum InstituteCategory {
 	GOVERNMENT_PUBLIC_SECTOR_ORGANISATIONS,

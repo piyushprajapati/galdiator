@@ -4,21 +4,28 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Component;
 
+import com.lti.entity.Ministry;
 import com.lti.entity.Student;
-import com.lti.interfaces.StudentInterface;
+import com.lti.entity.StudentInterface;
 
-@Component("student")
-public class StudenDao implements StudentInterface {
+@Component("s")
+public class StudentDao implements StudentInterface {
 
 	@PersistenceContext		//	@Autowired	does not work for EntityManager
 	private EntityManager entityManager;
 
 	@Transactional
+	public void addCentralMinistry(Ministry ministry) {
+		
+		System.out.println("Connection successful");
+		entityManager.persist(ministry);
+		
+	}
+	
 	public void addNewStudent(Student student) {
 		System.out.println("Connection successful");
 		entityManager.persist(student);
@@ -26,14 +33,7 @@ public class StudenDao implements StudentInterface {
 	}
 
 	public List<Student> getAllStudents() {
-		System.out.println("Connection successful");
-		String jpql = "select student from Student as student";
-//		String jpql = "select * from CarPart";
-		Query q = entityManager.createQuery(jpql);
-		List<Student> list = q.getResultList();
-		
-	
-		return list;
+		return null;
 
 	}
 	

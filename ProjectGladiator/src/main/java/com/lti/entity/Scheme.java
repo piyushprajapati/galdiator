@@ -4,10 +4,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import com.lti.enums.SchemeType;
 
 @Entity
 @Table(name="scheme_table")
@@ -19,7 +17,7 @@ public class Scheme {
 	private String scheme_detail;
 	private SchemeType scheme_type;
 	
-	@OneToMany(mappedBy = "scheme", cascade = CascadeType.ALL)
+	@OneToOne(mappedBy = "scheme", cascade = CascadeType.ALL)  //check
 	private Application application_scheme;
 
 	public int getScheme_no() {
@@ -53,6 +51,6 @@ public class Scheme {
 	public void setApplication_scheme(Application application_scheme) {
 		this.application_scheme = application_scheme;
 	}
-	
-	
+
+
 }

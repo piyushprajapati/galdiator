@@ -11,8 +11,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.lti.enums.InstituteCategory;
-
 @Entity
 @Table(name="institute_table")
 public class Institute {
@@ -22,7 +20,7 @@ public class Institute {
 	private int institute_code;
 	private String institute_name;
 	private InstituteCategory institute_category;
-	private int state;
+	//private int state; //error detected
 	private String district;
 	private String dise_code;
 	private String location;
@@ -42,16 +40,12 @@ public class Institute {
 	private boolean approved_state_status;
 	private boolean approved_ministry;
 	
-	@OneToMany(mappedBy = "institute", cascade = CascadeType.ALL) 
+	@OneToMany(mappedBy = "institute", cascade = CascadeType.ALL) //check
 	private List<Application> applications;
 	
 	@ManyToOne
-	@JoinColumn(name="state_id_ref")
+	@JoinColumn(name="state_id_ref")  //error detected
 	private StateNodal stateNodal;
-	
-	@ManyToOne
-	@JoinColumn(name="ministry_id_ref")
-	private Ministry ministry;
 
 	public int getInstitute_code() {
 		return institute_code;
@@ -75,14 +69,6 @@ public class Institute {
 
 	public void setInstitute_category(InstituteCategory institute_category) {
 		this.institute_category = institute_category;
-	}
-
-	public int getState() {
-		return state;
-	}
-
-	public void setState(int state) {
-		this.state = state;
 	}
 
 	public String getDistrict() {
@@ -245,14 +231,6 @@ public class Institute {
 		this.stateNodal = stateNodal;
 	}
 
-	public Ministry getMinistry() {
-		return ministry;
-	}
 
-	public void setMinistry(Ministry ministry) {
-		this.ministry = ministry;
-	}
-	
-	
-	
+
 }
