@@ -10,11 +10,11 @@
     	http://www.springframework.org/schema/context
     	http://www.springframework.org/schema/context/spring-context.xsd
     	http://www.springframework.org/schema/tx
-    	http://www.springframework.org/schema/tx/spring-tx.xsd
-    	http://www.springframework.org/schema/mvc">
+    	http://www.springframework.org/schema/tx/spring-tx.xsd">
+    	
 
 	<context:component-scan
-		base-package=" com.lti.dao" />
+		base-package=" com.lti.entity" />
 	<!-- DataSource Configuration -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -22,8 +22,8 @@
 			value="oracle.jdbc.driver.OracleDriver" />
 		<property name="url"
 			value="jdbc:oracle:thin:@localhost:1521:ORCL" />
-		<property name="username" value="dummy" />
-		<property name="password" value="dummy" />
+		<property name="username" value="sqlcheck" />
+		<property name="password" value="123" />
 	</bean>
 	<bean id="myEmf"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

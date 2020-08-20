@@ -87,6 +87,6 @@ public class StateNodal {
 	public void setApplications(List<Application> applications) {
 		this.applications = applications;
 	}
-
+	
 	
 }

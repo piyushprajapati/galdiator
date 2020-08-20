@@ -14,7 +14,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name="application_table")
 public class Application {
-	
 	@Id
 	@GeneratedValue
 	private int app_id;
@@ -46,22 +45,9 @@ public class Application {
 	private boolean approved_state;
 	private boolean approved_ministry;
 	
-	
-	
 	@ManyToOne
-	@JoinColumn(name="student_id_ref")    //check
+	@JoinColumn(name="student_id_ref")    
 	private Student student;
-	
-	
-	@OneToOne
-	@JoinColumn(name="scheme_no_ref")    //check
-	private Scheme scheme;
-	
-	@OneToOne(mappedBy = "application", cascade = CascadeType.ALL) //check
-	private Document document;
-	
-	@OneToOne(mappedBy = "application_acad", cascade = CascadeType.ALL) //check
-	private AcademicDetails academicDetails;
 	
 	@ManyToOne
 	@JoinColumn(name="ins_code_ref")  
@@ -70,6 +56,16 @@ public class Application {
 	@ManyToOne
 	@JoinColumn(name="state_id_ref")  
 	private StateNodal statenodal;
+	
+	@OneToOne
+	@JoinColumn(name="scheme_no_ref")    
+	private Scheme scheme;
+	
+	@OneToOne(mappedBy = "application_acad", cascade = CascadeType.ALL) 
+	private Academic academicDetails;
+	
+	@OneToOne(mappedBy = "application", cascade = CascadeType.ALL) //check
+	private Document document;
 	
 	
 
@@ -305,30 +301,6 @@ public class Application {
 		this.student = student;
 	}
 
-	public Scheme getScheme() {
-		return scheme;
-	}
-
-	public void setScheme(Scheme scheme) {
-		this.scheme = scheme;
-	}
-
-	public Document getDocument() {
-		return document;
-	}
-
-	public void setDocument(Document document) {
-		this.document = document;
-	}
-
-	public AcademicDetails getAcademicDetails() {
-		return academicDetails;
-	}
-
-	public void setAcademicDetails(AcademicDetails academicDetails) {
-		this.academicDetails = academicDetails;
-	}
-
 	public Institute getInstitute() {
 		return institute;
 	}
@@ -345,5 +317,31 @@ public class Application {
 		this.statenodal = statenodal;
 	}
 
-		
+	public Scheme getScheme() {
+		return scheme;
+	}
+
+	public void setScheme(Scheme scheme) {
+		this.scheme = scheme;
+	}
+
+	public Academic getAcademicDetails() {
+		return academicDetails;
+	}
+
+	public void setAcademicDetails(Academic academicDetails) {
+		this.academicDetails = academicDetails;
+	}
+
+	public Document getDocument() {
+		return document;
+	}
+
+	public void setDocument(Document document) {
+		this.document = document;
+	}
+
+	
+	
+	
 }

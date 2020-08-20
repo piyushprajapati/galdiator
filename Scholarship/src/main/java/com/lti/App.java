@@ -1,18 +1,20 @@
+package com.lti;
+
 import java.time.LocalDate;
 
-import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.lti.dao.StudentDao;
 import com.lti.entity.Gender;
-import com.lti.entity.Ministry;
 import com.lti.entity.Student;
+import com.lti.entity.StudentInterface;
 
-public class StudentTest {
+public class App {
 	
-	@Test
-	public void addStudent() {
+	public static void main(String[] args) {
+		ApplicationContext ctx=new ClassPathXmlApplicationContext("spring-config.xml");
+		StudentInterface sp=(StudentInterface)ctx.getBean("student1");
+		
 		Student student = new Student();
 		student.setPassword("aayush");
 		student.setName("aayush");
@@ -26,24 +28,7 @@ public class StudentTest {
 		student.setGender(Gender.Male);
 		student.setState_domicile("Rajasthan");
 		student.setDistrict("Ajmer");
-		
-		ApplicationContext ctx=new ClassPathXmlApplicationContext("spring-config.xml");
-		StudentDao dao = (StudentDao)ctx.getBean("s");
-		dao.addNewStudent(student);
-		
-	}
-	
-
-	@Test
-	public void addCentralMinistry() {
-		Ministry ministry =new Ministry();
-		ministry.setMinistry_username("Piyush");
-		ministry.setMinistry_password("abc");
-		
-		ApplicationContext ctx=new ClassPathXmlApplicationContext("spring-config.xml");
-		StudentDao dao = (StudentDao)ctx.getBean("s");
-		dao.addCentralMinistry(ministry);
-		
+		sp.addNewStudent(student);
 	}
 	
 
